@@ -369,19 +369,20 @@
         }
 
         .bgh-img-box {
-            width: 100%;
-            height: 270px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-        }
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
 
         .bgh-img-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
 
         .bgh-card:hover .bgh-img-box img {
             transform: scale(1.05);
@@ -436,7 +437,6 @@
             color: #555;
             line-height: 1.5;
         }
-
         /* DANH SÁCH CÁC TỔ BỘ MÔN */
         .departments-section {
             margin-bottom: 50px;
@@ -703,6 +703,29 @@
         .quiz-next{margin-top:8px;font:700 .95rem 'Quicksand',sans-serif;border:0;border-radius:20px;padding:10px 26px;color:#fff;cursor:pointer;background:linear-gradient(135deg,#e26388,#004aad)}
         .quiz-score{font:700 2.6rem 'Dancing Script',cursive;color:#e26388}
         @media (max-width:560px){.quiz-opts{grid-template-columns:1fr}}
+
+
+        /* ===== PHÓNG TO RIÊNG ẢNH TẬP THỂ BAN GIÁM HIỆU ===== */
+        .bgh-team-card .bgh-img-box {
+            height: 330px !important;
+        }
+
+        .bgh-team-card .bgh-img-box img {
+            transform: scale(1.15) !important;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .bgh-team-card:hover .bgh-img-box img {
+            transform: scale(1.25) !important;
+        }
+
+        @media (max-width: 600px) {
+            .bgh-team-card .bgh-img-box {
+                height: 280px !important;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -772,6 +795,18 @@
             <p class="bgh-subtitle">Những người chèo lái tận tụy, định hướng khát vọng và ngọn lửa tri thức cho mái trường THPT Lê Quý Đôn</p>
             
             <div class="bgh-grid">
+                 <!-- 5. Ảnh chung Ban Giám Hiệu -->
+                <div class="bgh-card bgh-team-card">
+                    <div class="bgh-img-box" onclick="openLightbox(this)">
+                        <img src="hieutruongvahieupho.jpg" alt="Tập thể Ban Giám Hiệu">
+                        <span class="bgh-tag"><i class="fa-solid fa-star"></i> Ban Giám Hiệu</span>
+                    </div>
+                    <div class="bgh-info">
+                        <h3><i class="fa-solid fa-award"></i> Tập Thể Ban Giám Hiệu</h3>
+                        <p class="role-text">Lãnh Đạo Nhà Trường</p>
+                        <p>Đội ngũ lãnh đạo tâm huyết, tầm nhìn chiến lược, luôn dành trọn yêu thương và trách nhiệm cho sự phát triển vững mạnh của THPT Lê Quý Đôn.</p>
+                    </div>
+                </div>
                 <!-- 1. Cô Lý Thị Quế - Hiệu Trưởng -->
                 <div class="bgh-card">
                     <div class="bgh-img-box" onclick="openLightbox(this)">
@@ -824,18 +859,6 @@
                     </div>
                 </div>
 
-                <!-- 5. Ảnh chung Ban Giám Hiệu -->
-                <div class="bgh-card">
-                    <div class="bgh-img-box" onclick="openLightbox(this)">
-                        <img src="hieutruongvahieupho.jpg" alt="Tập thể Ban Giám Hiệu">
-                        <span class="bgh-tag"><i class="fa-solid fa-star"></i> Ban Giám Hiệu</span>
-                    </div>
-                    <div class="bgh-info">
-                        <h3><i class="fa-solid fa-award"></i> Tập Thể Ban Giám Hiệu</h3>
-                        <p class="role-text">Lãnh Đạo Nhà Trường</p>
-                        <p>Đội ngũ lãnh đạo tâm huyết, tầm nhìn chiến lược, luôn dành trọn yêu thương và trách nhiệm cho sự phát triển vững mạnh của THPT Lê Quý Đôn.</p>
-                    </div>
-                </div>
             </div>
         </section>
 
