@@ -763,49 +763,46 @@
         .closing-photo-frame {
             position: relative;
             max-width: 950px;
-            margin: 0 auto 28px;
-            padding: 10px;
-            border-radius: 24px;
-            background: linear-gradient(135deg, #e7b85c, #fff, #e26388, #fff);
-            box-shadow: 0 12px 30px rgba(72,65,100,.18);
+            margin: 0 auto;
+            padding: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 12px 30px rgba(72,65,100,.22);
         }
         .closing-photo-frame img {
             display: block;
             width: 100%;
-            max-height: 560px;
-            object-fit: contain;
-            border-radius: 16px;
-            background: #fff;
+            max-height: 620px;
+            object-fit: cover;
+            border-radius: 8px;
             cursor: zoom-in;
         }
         .closing-wish {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 25px 28px;
-            border-radius: 22px;
-            background: rgba(255,255,255,.78);
-            border: 1px solid rgba(226,99,136,.22);
-            color: #38516f;
-            line-height: 1.9;
-            font-size: clamp(.98rem, 2vw, 1.12rem);
-            box-shadow: 0 8px 24px rgba(0,74,173,.07);
-        }
-        .closing-wish .wish-highlight {
-            display: block;
-            margin-bottom: 10px;
-            color: #c34e7a;
-            font: 700 clamp(1.45rem, 3vw, 2rem) 'Dancing Script', cursive;
-        }
-        .closing-wish .wish-signature {
-            display: block;
-            margin-top: 16px;
-            color: #b83f70;
-            font: 700 1.45rem 'Dancing Script', cursive;
+            position: absolute;
+            z-index: 2;
+            top: 3.5%;
+            left: 8%;
+            width: 84%;
+            padding: 12px 22px;
+            border-radius: 14px;
+            background: rgba(255,255,255,.91);
+            color: #30243a;
+            text-align: center;
+            line-height: 1.55;
+            font: italic 700 clamp(.78rem, 1.65vw, 1.22rem) 'Dancing Script', cursive;
+            box-shadow: 0 4px 16px rgba(0,0,0,.13);
+            pointer-events: none;
         }
         @media (max-width:600px) {
-            .closing-tribute { padding: 35px 14px 40px; border-radius: 22px; }
-            .closing-photo-frame { padding: 6px; }
-            .closing-wish { padding: 20px 16px; }
+            .closing-tribute { padding: 25px 10px 28px; border-radius: 18px; }
+            .closing-photo-frame { border-radius: 7px; }
+            .closing-photo-frame img { max-height: 440px; object-fit: cover; }
+            .closing-wish {
+                top: 3%; left: 4%; width: 92%;
+                padding: 7px 9px; border-radius: 9px;
+                line-height: 1.35; font-size: clamp(.68rem, 2.7vw, .92rem);
+            }
         }
 
     </style>
@@ -1089,18 +1086,12 @@
 
         <!-- LỜI TRI ÂN CUỐI TRANG: HỘI ĐỒNG SƯ PHẠM -->
         <section class="closing-tribute">
-            <div aria-hidden="true" style="font-size:2rem;">🌸 ✨ 💐 ✨ 🌸</div>
-            <h2>Hội Đồng Sư Phạm – Những Người Gieo Mầm Tri Thức</h2>
-            <p class="closing-subtitle">Tập thể thầy cô thân yêu của trường THPT Lê Quý Đôn – Long Bình Tân</p>
+            <div aria-hidden="true" style="font-size:2rem; margin-bottom:16px;">🌸 ✨ 💐 ✨ 🌸</div>
             <div class="closing-photo-frame" onclick="openLightbox(this)">
                 <img src="tấtcảgv.jpg" alt="Ảnh tập thể Hội đồng Sư phạm trường THPT Lê Quý Đôn – Long Bình Tân">
+                <div class="closing-wish">Mừng ngày Nhà giáo Việt Nam 20/11, tập thể lớp 12C2 kính chúc thầy/cô luôn dồi dào sức khỏe, bình an và tràn đầy năng lượng trên bục giảng. Cảm ơn thầy/cô đã mang đến những tiết học bổ ích, truyền cảm hứng và giúp chúng em vững vàng kiến thức cho kỳ thi quan trọng sắp tới.</div>
             </div>
-            <div class="closing-wish">
-                <span class="wish-highlight">Kính chúc quý thầy cô ngày 20/11 thật nhiều niềm vui!</span>
-                Kính chúc quý thầy cô luôn mạnh khỏe, hạnh phúc và bình an. Mong rằng ngọn lửa đam mê với nghề giáo sẽ mãi rực sáng, để mỗi ngày đến trường đều là một ngày đầy yêu thương và ý nghĩa. Cảm ơn thầy cô đã tận tụy dìu dắt, truyền cảm hứng và chắp cánh ước mơ cho bao thế hệ học sinh.
-                <span class="wish-signature">Chúng em xin gửi ngàn lời tri ân ❤️</span>
-            </div>
-            <div aria-hidden="true" style="font-size:1.8rem; margin-top:22px;">🌷 🌼 🌷 🌼 🌷</div>
+            <div aria-hidden="true" style="font-size:1.8rem; margin-top:18px;">🌷 🌼 🌷 🌼 🌷</div>
         </section>
 
     <footer class="site-footer">
