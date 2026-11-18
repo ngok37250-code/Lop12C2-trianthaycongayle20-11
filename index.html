@@ -726,6 +726,88 @@
             }
         }
 
+    
+        /* ===== KHUNG ẢNH HỘI ĐỒNG SƯ PHẠM VÀ LỜI CHÚC CUỐI TRANG ===== */
+        .closing-tribute {
+            position: relative;
+            overflow: hidden;
+            margin: 55px auto 35px;
+            padding: 42px 24px 48px;
+            border-radius: 30px;
+            text-align: center;
+            background: radial-gradient(circle at 10% 15%, rgba(255,255,255,.95), transparent 28%),
+                        linear-gradient(135deg, #fff0f5 0%, #e8f8ff 48%, #fff8e8 100%);
+            border: 2px solid rgba(226,99,136,.35);
+            box-shadow: 0 18px 45px rgba(0,74,173,.12);
+        }
+        .closing-tribute::before, .closing-tribute::after {
+            content: '✿  ✧  ❀  ✧  ✿';
+            position: absolute;
+            color: rgba(226,99,136,.35);
+            font-size: 25px;
+            letter-spacing: 9px;
+            pointer-events: none;
+        }
+        .closing-tribute::before { top: 15px; left: 18px; }
+        .closing-tribute::after { bottom: 13px; right: 18px; }
+        .closing-tribute h2 {
+            margin: 8px 0 10px;
+            color: #b83f70;
+            font: 700 clamp(1.8rem, 4vw, 2.7rem) 'Dancing Script', cursive;
+        }
+        .closing-tribute .closing-subtitle {
+            color: #37618c;
+            font-weight: 700;
+            margin: 0 auto 25px;
+        }
+        .closing-photo-frame {
+            position: relative;
+            max-width: 950px;
+            margin: 0 auto 28px;
+            padding: 10px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, #e7b85c, #fff, #e26388, #fff);
+            box-shadow: 0 12px 30px rgba(72,65,100,.18);
+        }
+        .closing-photo-frame img {
+            display: block;
+            width: 100%;
+            max-height: 560px;
+            object-fit: contain;
+            border-radius: 16px;
+            background: #fff;
+            cursor: zoom-in;
+        }
+        .closing-wish {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 25px 28px;
+            border-radius: 22px;
+            background: rgba(255,255,255,.78);
+            border: 1px solid rgba(226,99,136,.22);
+            color: #38516f;
+            line-height: 1.9;
+            font-size: clamp(.98rem, 2vw, 1.12rem);
+            box-shadow: 0 8px 24px rgba(0,74,173,.07);
+        }
+        .closing-wish .wish-highlight {
+            display: block;
+            margin-bottom: 10px;
+            color: #c34e7a;
+            font: 700 clamp(1.45rem, 3vw, 2rem) 'Dancing Script', cursive;
+        }
+        .closing-wish .wish-signature {
+            display: block;
+            margin-top: 16px;
+            color: #b83f70;
+            font: 700 1.45rem 'Dancing Script', cursive;
+        }
+        @media (max-width:600px) {
+            .closing-tribute { padding: 35px 14px 40px; border-radius: 22px; }
+            .closing-photo-frame { padding: 6px; }
+            .closing-wish { padding: 20px 16px; }
+        }
+
     </style>
 </head>
 <body>
@@ -1004,6 +1086,23 @@
         </section>
     </div>
 
+
+        <!-- LỜI TRI ÂN CUỐI TRANG: HỘI ĐỒNG SƯ PHẠM -->
+        <section class="closing-tribute">
+            <div aria-hidden="true" style="font-size:2rem;">🌸 ✨ 💐 ✨ 🌸</div>
+            <h2>Hội Đồng Sư Phạm – Những Người Gieo Mầm Tri Thức</h2>
+            <p class="closing-subtitle">Tập thể thầy cô thân yêu của trường THPT Lê Quý Đôn – Long Bình Tân</p>
+            <div class="closing-photo-frame" onclick="openLightbox(this)">
+                <img src="tấtcảgv.jpg" alt="Ảnh tập thể Hội đồng Sư phạm trường THPT Lê Quý Đôn – Long Bình Tân">
+            </div>
+            <div class="closing-wish">
+                <span class="wish-highlight">Kính chúc quý thầy cô ngày 20/11 thật nhiều niềm vui!</span>
+                Kính chúc quý thầy cô luôn mạnh khỏe, hạnh phúc và bình an. Mong rằng ngọn lửa đam mê với nghề giáo sẽ mãi rực sáng, để mỗi ngày đến trường đều là một ngày đầy yêu thương và ý nghĩa. Cảm ơn thầy cô đã tận tụy dìu dắt, truyền cảm hứng và chắp cánh ước mơ cho bao thế hệ học sinh.
+                <span class="wish-signature">Chúng em xin gửi ngàn lời tri ân ❤️</span>
+            </div>
+            <div aria-hidden="true" style="font-size:1.8rem; margin-top:22px;">🌷 🌼 🌷 🌼 🌷</div>
+        </section>
+
     <footer class="site-footer">
         <svg viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 C200 40 400 40 600 20 S1000 0 1200 30 V0Z" fill="rgba(255,255,255,.6)"/></svg>
         <div class="quote">Một ngày thầy cô, một đời tri ân</div>
@@ -1251,7 +1350,7 @@
             const box = document.getElementById('quizBox'); if (!box) return;
             const Q = [
                 ['Ngày Nhà giáo Việt Nam là ngày nào?', ['20/10', '20/11', '8/3', '1/6'], 1, 'Đúng rồi, 20/11 hằng năm là ngày tôn vinh thầy cô giáo.'],
-                ['Danh nhân Lê Quý Đôn – người đặt tên cho trường – sống ở thế kỷ nào?', ['Thế kỷ 15', 'Thế kỷ 16', 'Thế kỷ 18', 'Thế kỷ 20'], 2, 'Lê Quý Đôn (1726–1784) là nhà bác học nổi tiếng thế kỷ 18.'],
+                ['Theo em, học sinh nên thể hiện lòng biết ơn thầy cô bằng cách nào?', ['Chỉ tặng quà vào ngày 20/11', 'Chăm chỉ học tập, lễ phép và biết cố gắng', 'Không cần quan tâm lời dạy', 'Chỉ nói lời cảm ơn'], 1, 'Sự lễ phép, chăm chỉ và tiến bộ mỗi ngày là cách tri ân thiết thực.'],
                 ['"Không thầy đố mày làm nên" thuộc thể loại nào?', ['Thơ lục bát', 'Tục ngữ', 'Truyện cổ tích', 'Vè'], 1, 'Đây là câu tục ngữ, đề cao công lao của người thầy.'],
                 ['Ngày Nhà giáo Việt Nam được tổ chức chính thức từ năm nào?', ['1945', '1975', '1982', '2000'], 2, 'Từ năm 1982, 20/11 trở thành Ngày Nhà giáo Việt Nam.'],
                 ['Hình ảnh nào thường được ví với người thầy, cô giáo?', ['Người lái đò', 'Người thợ săn', 'Người đưa thư', 'Người canh gác'], 0, 'Người lái đò thầm lặng đưa học trò sang bờ tri thức.']
